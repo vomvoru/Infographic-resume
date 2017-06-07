@@ -5,58 +5,14 @@ import {
   Link
 } from 'react-router-dom'
 
+import Login from './page/Login'
+import Logout from './page/Logout'
+
 const Templates = () => (
   <div>
     <h2>Templates</h2>
   </div>
 )
-
-const Login = () => (
-  <div>
-    <h2>Login</h2>
-    <a href="#" onClick={onSignIn}>Sign in</a>
-  </div>
-)
-
-function onSignIn() {
-  let GoogleAuth = gapi.auth2.getAuthInstance()
-  GoogleAuth.signIn()
-}
-
-setTimeout(()=>{
-  gapi.load('auth2', function() {
-    gapi.auth2.init()
-    let GoogleAuth = gapi.auth2.getAuthInstance()
-    GoogleAuth.currentUser.listen((googleUser) => {
-      var profile = googleUser.getBasicProfile();
-      if(profile){
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-      }else{
-        console.log('logout')
-      }
-    })
-  });
-}, 1000)
-
-const Logout = () => (
-  <div>
-    <h2>Logout</h2>
-    <a href="#" onClick={onSignOut}>Sign out</a>
-  </div>
-)
-
-/*global gapi*/
-
-function onSignOut() {
-
-  var auth2 = gapi.auth2.getAuthInstance();
-  auth2.signOut().then(function () {
-    console.log('User signed out.');
-  });
-}
 
 const Mypage = ({ match }) => (
   <div>

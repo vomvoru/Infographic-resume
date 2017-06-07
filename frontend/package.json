@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "firebase": "^4.1.1",
     "react": "^15.5.4",
+    "react-addons-css-transition-group": "^15.5.2",
+    "react-addons-transition-group": "^15.5.2",
     "react-dom": "^15.5.4",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "^4.1.1",
+    "reactstrap": "^4.6.2",
+    "scriptjs": "^2.5.8"
   },
   "devDependencies": {
     "react-scripts": "1.0.7"
