@@ -14,6 +14,9 @@
 * bootstrap or reactstrap
 * styled-compoents or less or sass
 
+## 기획
+![logo](./plan/인포그래픽 이력서 제작도구.png)
+
 ## 디자인 프로토타이핑 (작업중)
 
 ### logo
