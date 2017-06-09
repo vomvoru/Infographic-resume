@@ -17,10 +17,10 @@
 ## 디자인 프로토타이핑 (작업중)
 
 ### logo
-![logo](./desgin/logo.png)
+![logo](./design/logo.png)
 
 ### login page
-![login](./desgin/login.png)
+![login](./design/login.png)
 
 ### header page
-![header](./desgin/header.png)
+![header](./design/header.png)
