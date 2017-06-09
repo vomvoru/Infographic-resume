@@ -17,7 +17,7 @@
 ## 디자인 프로토타이핑 (작업중)
 
 ### logo
-![logo](./desgin/login.png)
+![logo](./desgin/logo.png)
 
 ### login page
 ![login](./desgin/login.png)
