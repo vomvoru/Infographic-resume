@@ -15,7 +15,7 @@
 * styled-compoents or less or sass
 
 ## 기획
-![logo](./plan/cvisual.png)
+![plan](./plan/cvisual.png)
 
 ## 디자인 프로토타이핑 (작업중)
 
