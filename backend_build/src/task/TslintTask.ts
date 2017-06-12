@@ -3,7 +3,11 @@ import * as tslint from 'tslint'
 import Task from './Task'
 
 export default class TslintTask extends Task<TslintTaskConfig> {
-  public run() {
+  public run(): NodeJS.ReadWriteStream {
+    if(this.src === undefined || this.config === undefined) {
+      throw new Error('The parameter value is invalid.')
+    }
+
     const tsProject = tslint.Linter.createProgram(this.config.tsconfig)
 
     const tslintConfig = {
@@ -22,6 +26,6 @@ export default class TslintTask extends Task<TslintTaskConfig> {
   }
 }
 
-interface TslintTaskConfig {
+export interface TslintTaskConfig {
   tsconfig: string
 }

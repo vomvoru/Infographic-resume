@@ -1,5 +1,4 @@
 import * as chai from 'chai'
-import * as helper from '../../../helper'
 import * as chaiPromised from 'chai-as-promised'
 import * as fs from 'fs'
 
@@ -12,12 +11,12 @@ chai.should()
 chai.use(chaiPromised)
 
 describe('clean task', () => {
-  before(function () {
+  beforeEach(function () {
     var exists = fs.existsSync('./tmp');
     if (!exists) { fs.mkdirSync('./tmp'); }
   });
 
-  it('should return current filename', async () => {
+  it('remove a file', async () => {
     // given
     const tmpFile = './tmp/dir/test.js'
     const clean = new CleanTask(gulp.src('./tmp'))
@@ -32,8 +31,9 @@ describe('clean task', () => {
     fs.existsSync(tmpFile).should.equal(false)
   })
 
-  after(function () {
-    var exists = fs.existsSync('./tmp');
-    if (!exists) { fs.mkdirSync('./tmp'); }
+  afterEach(async () => {
+    const clean = new CleanTask(gulp.src('./tmp'))
+
+    await streamToPromise(clean.run())
   });
 })

@@ -1,28 +1,31 @@
 {
-  "name": "inforgraphic-resume-backend",
+  "name": "inforgraphic-resume-backend-build",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:watch": "tsc -w -p",
-    "start:watch": "nodemon dist/index.js",
-    "dev": "npm run start:watch | npm run build:watch",
+    "build:watch": "tsc -w",
     "test:gulp": "mocha ./dist/gulp/test/test.js -w -R list",
     "test": "npm run test:gulp"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.15.3"
   },
   "devDependencies": {
     "@types/chai": "^4.0.0",
     "@types/chai-as-promised": "^0.0.31",
-    "@types/express": "^4.0.35",
+    "@types/gulp": "^4.0.4",
+    "@types/gulp-tslint": "^3.6.31",
     "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.28",
+    "@types/undertaker": "^1.1.2",
     "chai": "^4.0.2",
     "chai-as-promised": "^6.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-tslint": "^8.1.1",
+    "gulp-typescript": "^3.1.7",
     "mocha": "^3.4.2",
     "nodemon": "^1.11.0",
     "tslint": "^5.4.3",

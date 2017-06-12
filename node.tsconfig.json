@@ -10,10 +10,6 @@
     "noUnusedParameters": true,
     "moduleResolution": "node",
     "module": "commonjs",
-    "target": "es5",
-    "jsx": "react"
-  },
-  "include": [
-    "./src/**/*"
-  ]
+    "target": "ES2016"
+  }
 }
